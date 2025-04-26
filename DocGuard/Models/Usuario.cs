@@ -12,30 +12,30 @@ namespace DocGuard.Models
         [Required]
         [MaxLength(100)]
         [Column("nombre")]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
         [Required]
         [MaxLength(100)]
         [Column("apellido")]
-        public string Apellido { get; set; }
+        public string? Apellido { get; set; }
 
         [Required]
         [MaxLength(100)]
         [EmailAddress]
         [Column("correo")]
-        public string Correo { get; set; }
+        public string? Correo { get; set; }
 
         [Required]
         [MaxLength(255)]
         [Column("clave")]
-        public string Clave { get; set; }
+        public string? Clave { get; set; }
 
         [Required]
         [MaxLength(50)]
         [Column("rol")]
-        public string Rol { get; set; }
+        public string? Rol { get; set; }
 
-        public ICollection<Documento> DocumentosSubidos { get; set; }
-        public ICollection<Permiso> Permisos { get; set; }
+        public ICollection<Documento>? DocumentosSubidos { get; set; }
+        public ICollection<Permiso>? Permisos { get; set; }
     }
 }
